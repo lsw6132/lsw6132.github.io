@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shanwen Liu | Academic Profile</title>
+  <meta
+    name="description"
+    content="Academic profile of Shanwen Liu, undergraduate student at Nanjing University interested in symbolic machine learning."
+  />
+  <style>
+    :root {
+      --bg: #f7f6f2;
+      --panel: #ffffff;
+      --text: #1c1f22;
+      --muted: #606770;
+      --line: #e7e4dc;
+      --accent: #0f5c4d;
+      --shadow: 0 10px 24px rgba(25, 35, 42, 0.06);
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
+      --max-width: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 22px 0 8px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 18px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 999px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand strong {
+      font-size: 0.96rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand span {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      color: var(--muted);
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 20px;
+      padding: 32px 0 20px;
+      align-items: stretch;
+    }
+
+    .hero-copy,
+    .hero-side,
+    .section-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-copy {
+      padding: 28px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--accent);
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 18px 0 12px;
+      font-size: clamp(2.2rem, 4vw, 3.8rem);
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    .lead {
+      margin: 0;
+      font-size: 1.07rem;
+      line-height: 1.8;
+      color: #30353a;
+      max-width: 62ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      border: 1px solid transparent;
+      transition: opacity 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .button-secondary {
+      border-color: var(--line);
+      background: #fff;
+      color: var(--text);
+    }
+
+    .hero-side {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .portrait {
+      min-height: 220px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: #faf9f6;
+      border: 1px solid var(--line);
+    }
+
+    .portrait img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 220px;
+      object-fit: cover;
+      object-position: center 22%;
+    }
+
+    .portrait strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .portrait p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 24ch;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .stat {
+      padding: 14px;
+      border-radius: var(--radius-md);
+      background: #fcfbf8;
+      border: 1px solid var(--line);
+    }
+
+    .stat-label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .stat strong {
+      font-size: 1.02rem;
+      line-height: 1.4;
+    }
+
+    main {
+      padding: 8px 0 40px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.72fr;
+      gap: 18px;
+    }
+
+    .stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .section-card {
+      padding: 22px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .section-header h2 {
+      margin: 0;
+      font-size: 1.45rem;
+    }
+
+    .section-header span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .interest-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      display: inline-flex;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #f5f8f6;
+      border: 1px solid #dbe7e2;
+      font-size: 0.92rem;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 14px;
+    }
+
+    .timeline-item {
+      padding: 16px 18px;
+      border-left: 3px solid var(--accent-2);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      background: #fcfbf8;
+    }
+
+    .timeline-item strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .timeline-item span,
+    .muted {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .pub-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .pub-item {
+      padding: 18px;
+      border-radius: var(--radius-md);
+      background: #fcfbf8;
+      border: 1px solid var(--line);
+    }
+
+    .pub-item strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-row {
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      background: #fcfbf8;
+      border: 1px solid var(--line);
+    }
+
+    .contact-row small {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .footer {
+      padding: 0 0 40px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 920px) {
+      .hero,
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy,
+      .hero-side,
+      .section-card {
+        padding: 22px;
+      }
+
+      .topbar {
+        border-radius: 24px;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(calc(100% - 20px), var(--max-width));
+      }
+
+      h1 {
+        font-size: 2.4rem;
+      }
+
+      .stat-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="container">
+      <div class="topbar">
+        <div class="brand">
+          <strong>Shanwen Liu</strong>
+          <span>Academic Profile</span>
+        </div>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#interests">Interests</a>
+          <a href="#publications">Publications</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="container hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Undergraduate Research Profile</div>
+        <h1>Shanwen Liu</h1>
+        <p class="lead">
+          My name is Shanwen Liu. I am a second-year undergraduate student at Nanjing University
+          majoring in Intelligent Science and Technology. My current research interest is symbolic
+          machine learning.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="mailto:241880105@smail.nju.edu.cn">Email Me</a>
+          <a class="button button-secondary" href="#publications">View Publications</a>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <div class="portrait">
+          <img src="avatar.png" alt="Shanwen Liu" />
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat">
+            <span class="stat-label">Affiliation</span>
+            <strong>Nanjing University</strong>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Program</span>
+            <strong>Intelligent Science and Technology</strong>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Focus</span>
+            <strong>Symbolic Machine Learning</strong>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Status</span>
+            <strong>Second-Year Student</strong>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <main class="container">
+      <div class="content-grid">
+        <div class="stack">
+          <section class="section-card" id="about">
+            <div class="section-header">
+              <h2>About</h2>
+          <span>Short introduction</span>
+            </div>
+            <p class="lead" style="font-size: 1rem; margin-bottom: 14px;">
+              I am interested in machine learning, especially symbolic approaches that connect
+              structured reasoning with modern AI systems.
+            </p>
+          </section>
+
+          <section class="section-card" id="publications">
+            <div class="section-header">
+              <h2>Publications</h2>
+              <span>Interface reserved for later updates</span>
+            </div>
+            <div class="pub-list">
+              <article class="pub-item">
+                <strong>Publication list placeholder</strong>
+                <span class="muted">
+                  Add your papers here later in the format: title, authors, venue, year, and links.
+                </span>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <div class="stack">
+          <section class="section-card" id="interests">
+            <div class="section-header">
+              <h2>Research Interests</h2>
+              <span>Editable tags</span>
+            </div>
+            <div class="interest-list">
+              <span class="chip">Symbolic Machine Learning</span>
+              <span class="chip">Machine Learning</span>
+              <span class="chip">Artificial Intelligence</span>
+            </div>
+          </section>
+
+          <section class="section-card">
+            <div class="section-header">
+              <h2>Education</h2>
+              <span>Current profile</span>
+            </div>
+            <div class="timeline">
+              <article class="timeline-item">
+                <strong>B.Eng. in Intelligent Science and Technology</strong>
+                <span>Nanjing University</span>
+              </article>
+            </div>
+          </section>
+
+          <section class="section-card" id="contact">
+            <div class="section-header">
+              <h2>Contact</h2>
+              <span>Primary contact details</span>
+            </div>
+            <div class="contact-list">
+              <div class="contact-row">
+                <small>Email</small>
+                <a href="mailto:241880105@smail.nju.edu.cn">241880105@smail.nju.edu.cn</a>
+              </div>
+              <div class="contact-row">
+                <small>Affiliation</small>
+                <span>Nanjing University</span>
+              </div>
+              <div class="contact-row">
+                <small>Avatar Interface</small>
+                <span>The current photo file is <code>avatar.png</code> in the same folder as this page.</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <div class="container footer">
+      This static page is ready for submission-profile use and can be expanded with papers, CV, and links later.
+    </div>
+  </div>
+</body>
+</html>
